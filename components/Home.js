@@ -9,7 +9,8 @@ import discoverCategoriesData from '../assets/data/discoverCategoriesData';
 import learnMoreData from '../assets/data/learnMoreData';
 import discoverData from '../assets/data/discoverData'
 import { SafeAreaView } from "react-native-safe-area-context";
-import profile from '../assets/images/person.png'
+import profile from '../assets/images/profile.png';
+import { DrawerActions } from '@react-navigation/native';
 
 Feather.loadFont();
 Entypo.loadFont();
@@ -77,8 +78,12 @@ const Home = ({ navigation }) => {
                 {/**Header */}
                 <SafeAreaView>
                     <View style={styles.menuWrapper}>
-                        <Feather name="menu" size={32} color={colors.black} style={styles.menuIcon} />
-                        <Image source={profile} style={styles.profileImage} />
+                        <TouchableOpacity onPress={() => navigation.dispatch(DrawerActions.toggleDrawer())}>
+                            <Feather name="menu" size={32} color={colors.yellow} style={styles.menuIcon} />
+                        </TouchableOpacity>
+                        <TouchableOpacity onPress={() => navigation.navigate('Profile')}>
+                            <Image source={profile} style={styles.profileImage} />
+                        </TouchableOpacity>
                     </View>
                 </SafeAreaView>
 

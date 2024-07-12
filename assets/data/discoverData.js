@@ -1,7 +1,7 @@
 const discoverData = [
     {
       id: 'discover-1',
-      title: 'Sri Arulmigu Ramanathaswamy Temple',
+      title: 'Sri Ramanatha Swamy Temple',
       location: 'Rameswaram, Tamil Nadu',
       image: require('../images/ramanathaswamy-temple.jpg'),
       imageBig: require('../images/ramanathaswamy-temple.jpg'),
