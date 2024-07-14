@@ -11,6 +11,7 @@ import discoverData from '../assets/data/discoverData'
 import { SafeAreaView } from "react-native-safe-area-context";
 import profile from '../assets/images/profile.png';
 import { DrawerActions } from '@react-navigation/native';
+import MenuIcon from "./Menu";
 
 Feather.loadFont();
 Entypo.loadFont();
@@ -78,9 +79,7 @@ const Home = ({ navigation }) => {
                 {/**Header */}
                 <SafeAreaView>
                     <View style={styles.menuWrapper}>
-                        <TouchableOpacity onPress={() => navigation.dispatch(DrawerActions.toggleDrawer())}>
-                            <Feather name="menu" size={32} color={colors.yellow} style={styles.menuIcon} />
-                        </TouchableOpacity>
+                        <MenuIcon />
                         <TouchableOpacity onPress={() => navigation.navigate('Profile')}>
                             <Image source={profile} style={styles.profileImage} />
                         </TouchableOpacity>

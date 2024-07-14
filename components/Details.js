@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, ImageBackground, Dimensions, TouchableOpacity } from "react-native";
+import { View, Text, StyleSheet, ImageBackground, Dimensions, TouchableOpacity, ScrollView } from "react-native";
 import colors from '../assets/colors/colors';
 import Entypo from 'react-native-vector-icons/Entypo'
 
@@ -29,7 +29,7 @@ const Details = ({ route, navigation }) => {
                 </View>
                 <View style={styles.descriptionTextWrapper}>
                     <Text style={styles.descriptionTitle}>Description</Text>
-                    <Text style={styles.descriptionText}>{item.description}</Text>
+                        <Text style={styles.descriptionText}>{item.description}</Text>
                 </View>
 
                 <View style={styles.infoWrapper}>
@@ -133,7 +133,7 @@ const styles = StyleSheet.create({
         marginTop: 20,
         fontSize: 16,
         color: colors.darkGray,
-        height: 85,
+        height: 100,
     },
     infoWrapper: {
         flexDirection: 'row',

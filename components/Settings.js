@@ -3,7 +3,7 @@ import { View, Text, StyleSheet } from 'react-native';
 import colors from '../assets/colors/colors';
 import MenuIcon from './Menu';
 
-const Liked = () => {
+const Settings = () => {
   return (
     <View style={styles.container}>
       <View style={styles.menuWrapper}>
@@ -16,8 +16,10 @@ const Liked = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    color: colors.white
-},
+    justifyContent: 'center',
+    backgroundColor: colors.white,
+    paddingTop: 50,
+  },
   menuWrapper: {
     position: 'absolute',
     top: 74,
@@ -29,4 +31,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Liked;
+export default Settings;

@@ -21,7 +21,6 @@ const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 const Drawer = createDrawerNavigator();
 
-
 const TabNavigator = () => {
   return (
     <Tab.Navigator
